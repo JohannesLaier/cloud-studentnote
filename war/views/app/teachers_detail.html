@@ -1,0 +1,87 @@
+<div class="row">
+	<div class="col-sm-12 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Infos</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" placeholder="Vorname" class="form-control" ng-model="current.firstName" />
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Nachname" class="form-control" ng-model="current.lastName" />
+				</div>
+				<div class="form-group">	
+					<div class="row">
+						<div class="col-md-8">
+							<input type="text" placeholder="Straße" class="form-control" ng-model="current.streetName" />
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="H-Nr" class="form-control" ng-model="current.streetNo" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group">	
+					<div class="row">
+						<div class="col-md-4">
+							<input type="text" placeholder="PLZ" class="form-control" ng-model="current.zip" />
+						</div>
+						<div class="col-md-8">
+							<input type="text" placeholder="Ort" class="form-control" ng-model="current.city" />
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Telefon" class="form-control" ng-model="current.phone" />
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Handy-Nummer" class="form-control" ng-model="current.mobile" />
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="E-Mail" class="form-control" ng-model="current.email" />
+				</div>
+				<div class="form-group">
+					<input type="password" placeholder="Password" class="form-control" ng-model="current.password" />
+				</div>
+				<div class="form-group">
+					<input type="password" placeholder="Password Wiederholen" class="form-control" ng-model="current.password2" />
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Lohn" class="form-control" ng-model="current.salary" />
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="current.admin">Administrator
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Schüler</div>
+			<div class="panel-body">
+				<ul class="list-group">
+					<li class="list-group-item" ng-repeat="student in students">
+						{{ student.firstName }} {{ student.lastName }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Bank</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" placeholder="IBAN" class="form-control" ng-model="current.iban">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="BIC" class="form-control" ng-model="current.bic">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container row">
+		<div class="col-md-12">
+			<button class="btn btn-default"  ng-click="save();" ng-disabled="!validate();">Speichern</button>
+			<a class="btn btn-default" href="#/teachers/" role="button">Abbrechen</a>
+		</div>
+	</div>
+</div>

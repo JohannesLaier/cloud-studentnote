@@ -1,0 +1,42 @@
+div.modal {
+	background-color: #0c0c0c;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+	left: 0px;
+	top: 0px;
+}
+
+div.popup {
+	position: absolute;
+	padding: 20px;
+	background-color: #ffffff;
+	border-radius: 5px;
+	border: 1px solid #acacac;
+	left: 50%;
+	top: 50%;
+}
+
+div.popup div.header {
+	text-align: center;
+	padding: 5px 0;
+	border-bottom: 1px solid #5e5e5e; 
+}
+
+div.popup div.content {
+	padding: 5px;
+	border-bottom: 1px solid #5e5e5e;
+}
+
+div.popup button {
+	margin-top: 10px;
+}
+
+div.popup button:first-child {
+	float: left;
+}
+
+div.popup button:last-child {
+	float: right;
+}

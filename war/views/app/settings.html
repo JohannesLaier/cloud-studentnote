@@ -1,0 +1,60 @@
+<div class="row" ng-controller="SettingsController">
+	<div class="col-sm-12 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Infos</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" placeholder="Name" class="form-control" ng-model="data.school.name">
+				</div>
+				<div class="form-group">	
+					<div class="row">
+						<div class="col-md-8">
+							<input type="text" placeholder="Straße" class="form-control" ng-model="data.school.addressStreetName">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="H-Nr" class="form-control" ng-model="data.school.addressStreetNo">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">	
+					<div class="row">
+						<div class="col-md-4">
+							<input type="text" placeholder="PLZ" class="form-control" ng-model="data.school.addressZip">
+						</div>
+						<div class="col-md-8">
+							<input type="text" placeholder="Ort" class="form-control" ng-model="data.school.addressCity">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="email" placeholder="E-Mail" class="form-control" ng-model="data.school.email">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Bank</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" placeholder="Konto Besitzer Name" class="form-control" ng-model="data.school.bankAccountName">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="IBAN" class="form-control" ng-model="data.school.bankAccountIBAN">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="BIC" class="form-control" ng-model="data.school.bankAccountBIC">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Gläubiger Identifikationsnummer" class="form-control" ng-model="data.school.bankAccountCreditorID">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container row">
+		<div class="col-md-12">
+			<button class="btn btn-default" ng-click="save();" ng-disabled="!validate();">Speichern</button>
+			<a class="btn btn-default" href="#/" role="button">Abbrechen</a>
+		</div>
+	</div>
+</div>

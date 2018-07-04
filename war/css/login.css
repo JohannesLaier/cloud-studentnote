@@ -1,0 +1,55 @@
+.mdl-layout--fixed-drawer>.mdl-layout__content {
+    margin-left: 0 !important;
+}
+
+.mdl-layout--fixed-drawer.is-upgraded:not(.is-small-screen)>.mdl-layout__header {
+    margin-left: 0 !important;
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 768px) {
+    div#view {
+	    width: 100% !important;
+	}
+}
+
+div#view {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 15%;
+}
+
+div#view input[type="text"],
+div#view input[type="email"],
+div#view input[type="password"] {
+    width: 100%;
+    padding: 5px;
+}
+
+div#view div#invalidEmail,
+div#view div#invalidPassword {
+	border: 1px solid #c62828;
+    padding: 5px;
+    color: #c62828;
+    text-align: center;
+    margin: 25px 0;
+	display: none;
+}
+
+div#view a {
+    position: absolute;
+    bottom: 25px;
+    text-align: center;
+    left: 50%;
+    margin-left: -40px;
+	text-decoration: none;
+}
+
+div.login a {
+	color: #3f3f3f;
+}
+
+div.login button {
+	width: calc(100% + 13px);
+	padding: 5px;
+}

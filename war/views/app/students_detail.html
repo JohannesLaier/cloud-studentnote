@@ -1,0 +1,120 @@
+<div class="row">
+	<div class="col-sm-12 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Infos</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" placeholder="Vorname" class="form-control" ng-model="current.firstName">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Nachname" class="form-control" ng-model="current.lastName">
+				</div>
+				<div class="form-group">	
+					<div class="row">
+						<div class="col-md-8">
+							<input type="text" placeholder="Straße" class="form-control" ng-model="current.streetName">
+						</div>
+						<div class="col-md-4">
+							<input type="text" placeholder="H-Nr" class="form-control" ng-model="current.streetNo">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">	
+					<div class="row">
+						<div class="col-md-4">
+							<input type="text" placeholder="PLZ" class="form-control" ng-model="current.zip">
+						</div>
+						<div class="col-md-8">
+							<input type="text" placeholder="Ort" class="form-control" ng-model="current.city">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Telefon" class="form-control" ng-model="current.phone">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Handy-Nummer" class="form-control" ng-model="current.mobile">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="E-Mail" class="form-control" ng-model="current.email">
+				</div>
+				<label for="teacher">Dozent:</label>
+				<select id="teacher" ng-model="current.teacher">
+					<option
+						value="{{ teacher.id }}"
+						ng-repeat="teacher in data.teachers"
+						ng-selected="current.teacher == teacher.id"
+					>
+						{{ teacher.firstName }} {{ teacher.lastName }}
+					</option>
+				</select>
+				<label for="teacherSubstitute">Alternativ Dozent:</label>
+				<select id="teacherSubstitute" ng-model="current.teacherSubstitute">
+					<option
+						value="{{ teacher.id }}"
+						ng-repeat="teacher in data.teachers"
+						ng-selected="current.teacherSubstitute == teacher.id"
+					>
+						{{ teacher.firstName }} {{ teacher.lastName }}
+					</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12 col-md-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Termin</div>
+			<div class="panel-body">
+				<select id="duration" ng-model="current.lessonType">
+					<option value="1">1 Stunde</option>
+					<option value="1.5">1,5 Stunden</option>
+				</select>
+				<div class="form-group">
+					<input type="number" placeholder="Wiederholung in Tagen" class="form-control" ng-model="current.lessionInterval" />
+				</div>
+				<div class="input-group date datepicker" data-provide="datepicker">
+					<input id="date" type="text" class="form-control" placeholder="Datum" ng-model="current.lessonStartDate">
+					<div class="input-group-addon">
+						<span class="glyphicon glyphicon-th"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Preis" class="form-control" ng-model="current.price">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" checked ng-model="current.active">Aktiv / Pausiert
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">Bank</div>
+			<div class="panel-body">
+				<div class="form-group">
+					<input type="text" placeholder="Konto Besitzer Name" class="form-control" ng-model="current.bankAccountOwner" ng-disabled="current.cashPayer">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="IBAN" class="form-control" ng-model="current.iban" ng-disabled="current.cashPayer">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="BIC" class="form-control" ng-model="current.bic" ng-disabled="current.cashPayer">
+				</div>
+				<div class="form-group">
+					<input type="text" placeholder="Mandatsreferenz" class="form-control" ng-model="current.mandatRef" ng-disabled="current.cashPayer">
+				</div>
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="current.cashPayer">Bezahlt Bar
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container row">
+		<div class="col-md-12">
+			<button class="btn btn-default" ng-click="save();" ng-disabled="!validate();">Speichern</button>
+			<a class="btn btn-default" href="#/students/" role="button">Abbrechen</a>
+		</div>
+	</div>
+</div>

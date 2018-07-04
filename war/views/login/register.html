@@ -1,0 +1,14 @@
+<span ng-controller="RegisterController">
+	<div id="invalidEmail">
+		Diese E-Mail Adresse ist bereits in Verwendung.
+	</div>
+	<input type="text" name="school" placeholder="Name der Schule" ng-model="school" />
+	<input type="text" name="firstName" placeholder="Vorname" ng-model="firstName" />
+	<input type="text" name="lastName" placeholder="Nachname" ng-model="lastName" />
+	<input type="email" name="email" placeholder="E-Mail" ng-model="email" />
+	<input type="password" name="password" placeholder="Password" ng-model="password" />
+	<br />
+	<button ng-click="register();">
+		Jetzt registrieren
+	</button>
+</span>

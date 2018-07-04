@@ -1,0 +1,20 @@
+<span ng-controller="LoginController">
+	<div id="invalidPassword">
+		Falsche Email-Adresse oder Passwort. Bitte versuchen sie es erneut.
+	</div>
+	<form ng-submit="login($event)" method="POST" action="#">
+		<input type="email" name="email" placeholder="E-Mail" ng-model="email" />
+		<input type="password" name="password" placeholder="Password" ng-model="password" />
+		<!--
+		<input type="checkbox" id="keepSignedIn" name="keepSignedIn" />
+		<label for="keepSignedIn"> <span></span> Eingeloggt bleiben </label>
+		-->
+		<br />
+		<button ng-click="login($event);">
+			Login
+		</button>
+	</form>
+	<!-- 
+	<a href="#/register">Jetzt registrieren</a>
+	 -->
+</span>

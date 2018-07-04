@@ -1,0 +1,76 @@
+div.student {
+    display: inline-block;
+    max-width: 200px;
+    min-height: 50px;
+    padding: 5px;
+}
+div.student img {
+    width: 150px;
+    height: 150px;
+    border-radius: 85px;
+    display: block;
+    margin: 5px auto;
+}
+div.student span {
+    display: block;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #efefef;
+    border-radius: 85px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.082);
+}
+div.student a {
+    text-decoration: none;
+    color: black;
+}
+
+#page {
+	display: block;
+    overflow: auto;
+}
+
+#page #control {
+    min-height: 50px;
+}
+
+#page #control #class {
+    float: left;
+    width: 45%;
+}
+
+#page #control div {
+    float: right;
+    width: 45%;
+    top: 10px;
+    padding: 0 !important;
+}
+
+#page #control div input {
+    margin: 0 !important;
+}
+
+#page #control div span {
+    margin: 0 !important;
+    padding-bottom: 6px;
+}
+
+#page a {
+	margin: 0 auto;
+    display: table;
+}
+
+#page p {
+	text-align: center;
+}
+
+@media (max-width: 1050px) {
+    #page #control #class {
+        margin: 5px;
+        width: 100%;
+    }
+    #page #control div {
+        float: left;
+        width: 100%;
+        margin: 5px;
+    }
+}

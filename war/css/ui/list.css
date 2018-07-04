@@ -1,0 +1,48 @@
+div.list {
+    height: 80%;
+}
+div.list span {
+    width: 93%;
+    padding-top: 5px;
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    color: #2196f4;
+    font-size: larger;
+}
+div.list ul {
+    list-style-type: none;
+    padding: 5px;
+    width: 95%;
+    height: 90%;
+    overflow: auto;
+}
+div.list ul li {
+    border: 1px solid #efefef;
+    margin: 10px 0px;
+    text-align: center;
+    padding: 15px 5px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.082);
+}
+div.list ul li span {
+    background-image: url("../../images/delete.png");
+    background-repeat: no-repeat;
+    float: right;
+    height: 20px;
+    width: 24px;
+    margin-top: -2px;
+    margin-right: 10px;
+}
+
+div.list ul li span.add {
+	background-image: url("../../images/plus.png");
+}
+
+div.list a {
+    text-decoration: none;
+    color: #000000;
+}
+
+div.list ul a:first-child li {
+    padding: 5px;
+}

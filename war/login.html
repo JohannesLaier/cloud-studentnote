@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+		<title>Aufgabenwerkstatt</title>
+
+		<!-- Add to homescreen for Chrome on Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+		<!-- Add to homescreen for Safari on iOS -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-title" content="Aufgabenwerkstatt">
+		<link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+		<!-- Tile icon for Win8 (144x144 + tile color) -->
+		<meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+		<meta name="msapplication-TileColor" content="#3372DF">
+
+		<link rel="shortcut icon" href="images/favicon.png">
+
+		<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+		<!--
+		<link rel="canonical" href="http://www.example.com/">
+		-->
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui/list.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui/search.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui/dialog.css" />
+		<link rel="stylesheet" type="text/css" href="css/ui/table.css" />
+
+		<link rel="stylesheet" type="text/css" href="css/login.css" />
+		<link rel="stylesheet" type="text/css" href="css/plugins/loading.css" />
+		<link rel="stylesheet" type="text/css" href="css/plugins/notification.css" />
+
+		<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+		<script type="text/javascript" src="js/plugins/loading.js"></script>
+		<script type="text/javascript" src="js/plugins/notification.js"></script>
+		<script type="text/javascript" src="js/plugins/iban.js"></script>
+	</head>
+	<body>
+		<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+		<header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+			<div class="mdl-layout__header-row">
+				<a href="/">
+					<img src="images/logo_login.png" style="height: 25px;" />
+					<!-- <span class="mdl-layout-title">
+						Login
+					</span>
+					 -->
+				 </a>
+			</div>
+		</header>
+		<main id="page" class="mdl-layout__content mdl-color--grey-100">
+			<div class="login">
+				<div id="view" ng-view></div>
+
+				<!--
+				<input type="text" id="email" placeholder="E-Mail" />
+				<input type="password" id="password" placeholder="Password" />
+				<a href="index.html">
+				<button>Login</button>
+				</a>
+				-->
+			</div>
+		</main>
+
+		<script src="js/lib/angular.js"></script>
+		<script src="js/lib/angular-animate.js"></script>
+		<script src="js/lib/angular-route.js"></script>
+
+		<!-- Modules -->
+		<script src="js/login.app.js"></script>
+
+		<!-- Services -->
+		<script src="js/services/RESTService.js"></script>
+
+		<!-- Controller -->
+		<script src="js/controllers/LoginController.js"></script>
+		<script src="js/controllers/RegisterController.js"></script>
+
+		<script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	</body>
+</html>

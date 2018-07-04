@@ -1,0 +1,65 @@
+div.search {
+    padding: 10px;
+    width: calc(100% - 55px);
+}
+
+div.search input {
+	min-width: 250px;
+}
+
+div.search span {
+	width: 24px;
+	height: 25px;
+	display: block;
+	float: left;
+	background: url(../../images/search.png) no-repeat;
+	background-position: center;
+	border: 0;
+	border-bottom: 2px solid #c0c0c0;
+	margin-top: 11px;
+	margin-bottom: 10px;
+	padding: 5px 0;
+	float: left;
+}
+
+div.search input {
+	height: 26px;
+	float: right;
+	width: calc(100% - 24px) !important;
+	display: block;
+}
+
+div.search input:focus + span {
+	border-bottom: 2px solid #2196f4;
+}
+
+div.search + * {
+	clear: both;
+}
+
+div.search input[type="text"],
+div.search input[type="email"],
+div.search input[type="password"],
+div.search input[type="checkbox"] + label,
+div.search input[type="checkbox"] + label span,
+div.search button,
+div.search a.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.search input[type="text"],
+div.search input[type="email"],
+div.search input[type="password"] {
+	padding: 5px 0;
+    border: 0;
+    border-bottom: 2px solid #c0c0c0;
+	outline: none;
+}
+
+div.search input[type="text"]:focus,
+div.search input[type="email"]:focus,
+div.search input[type="password"]:focus {
+	border: 0;
+	border-bottom: 2px solid #2196f4;
+}

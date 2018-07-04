@@ -1,0 +1,15 @@
+<div class="list">
+	<ul>
+		<a href="#/teachers/add">
+			<li title="Neuen Lehrer hinzufügen">
+				<img src="images/add.png" alt="Add new teacher">
+			</li>
+		</a>
+		<a ng-repeat="teacher in data.teachers | orderBy:'lastName'" href="#/teachers/{{ teacher.id }}">
+			<li>
+				{{ teacher.firstName }} {{ teacher.lastName }}
+				<span ng-click="remove($event, teacher.id);"></span>
+			</li>
+		</a>
+	</ul>
+</div>

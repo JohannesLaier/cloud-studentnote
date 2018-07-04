@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<servlet>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>de.aufgabenwerkstatt.app.server</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.sun.jersey.config.feature.DisableWADL</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Jersey REST Service</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>SuperUserAdmin</servlet-name>
+		<servlet-class>de.aufgabenwerkstatt.app.server.su.SuperUserAdmin</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SuperUserAdmin</servlet-name>
+		<url-pattern>/su/admin</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>ObjectBackup</servlet-name>
+		<servlet-class>de.aufgabenwerkstatt.app.server.backup.ObjectBackup</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ObjectBackup</servlet-name>
+		<url-pattern>/backup</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Crons</servlet-name>
+		<servlet-class>de.aufgabenwerkstatt.app.server.cron.Daily</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Crons</servlet-name>
+		<url-pattern>/cron</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Report</servlet-name>
+		<servlet-class>de.aufgabenwerkstatt.app.server.report.ReportGenerator</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Report</servlet-name>
+		<url-pattern>/report</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<servlet-class>com.google.api.server.spi.SystemServiceServlet</servlet-class>
+		<init-param>
+			<param-name>services</param-name>
+			<param-value />
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SystemServiceServlet</servlet-name>
+		<url-pattern>/_ah/spi/*</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>2592000</session-timeout>
+	</session-config>
+
+	<context-param>
+	    <param-name>org.mortbay.jetty.servlet.MaxAge</param-name>
+	    <!-- amount of seconds (1 month in this case) -->
+	    <param-value>2592000</param-value> 
+	</context-param>
+</web-app>

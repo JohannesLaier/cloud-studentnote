@@ -1,0 +1,18 @@
+<div>
+	<div ng-hide="students.length <= 0">
+		<div class="student" ng-repeat="student in students | orderBy:'lastName'">
+			<a href="#/dashboard/{{ student.id }}">
+				<img src="images/profile.png" alt="" />
+				<span>{{ student.firstName }} {{ student.lastName }}</span>
+			</a>
+		</div>
+	</div>
+	<div ng-show="students.length <= 0">
+		<p>
+			Ihnen sind noch keine zu unterrichtenden Schüler zugewiesen.
+		</p>
+		<a class="btn btn-default" href="#/students" role="button" ng-hide="!data.user.admin">Schüler anlegen</a>
+	</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="css/dashboard.css" />

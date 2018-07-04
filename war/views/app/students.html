@@ -1,0 +1,19 @@
+<div class="search">
+	<input type="text" name="search" placeholder="Schüler suchen" ng-model="search" />
+	<span></span>
+</div>
+<div class="list">
+	<ul>
+		<a href="#/students/add">
+			<li title="Neuen Schüler hinzufügen">
+				<img src="images/add.png" alt="Add new student">
+			</li>
+		</a>
+		<a ng-repeat="student in data.students | orderBy:'lastName' | filter:search" href="#/students/{{ student.id }}">
+			<li>
+				{{ student.firstName }} {{ student.lastName }}
+				<span ng-click="remove($event, student.id)"></span>
+			</li>
+		</a>
+	</ul>
+</div>
