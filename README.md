@@ -11,5 +11,5 @@ The backend has been built with Java Ee Technologies such as Jax.RS, JPA, Java X
 
 ## Screenshots ##
 
-![App togin page](docs/imgages/app_login.png?raw=true "App login page")
-![App teachers page](docs/imgages/app_list.png?raw=true "App teachers page")
+![App login page](docs/images/app_login.png?raw=true "App login page")
+![App teachers page](docs/images/app_list.png?raw=true "App teachers page")
